@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Exemplo de cálculo de população</title>
+</head>
+
+<body>
+    <h1>Cálculo de População</h1>
+    <p>Cidade A = 100.000 habitantes</p>
+    <p>Cidade B = 270.000 habitantes</p>
+    <p>Taxa de crescimento de A = 2% ao ano</p>
+    <p>Taxa de crescimento de B = 0,4% ao ano</p>
+
+    <button onclick="calcularAnos()">Calcular anos</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcularAnos() {
+            var populacaoA = 100000;
+            var populacaoB = 270000;
+            var taxaCrescimentoA = 0.02;
+            var taxaCrescimentoB = 0.004;
+
+            var t = Math.log(populacaoB / populacaoA) / Math.log(1 + taxaCrescimentoB / 1 + taxaCrescimentoA);
+            t = Math.round(t);
+            
+            document.getElementById("resultado").innerHTML = " População A ultrapassou os habitantes em " + t + " anos.";
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>
